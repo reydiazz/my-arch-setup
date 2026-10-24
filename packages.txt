@@ -12,3 +12,5 @@ openssh
 sudo
 tree
 stow
+kbd
+terminus-font
