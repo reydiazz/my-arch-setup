@@ -1,0 +1,14 @@
+base
+efibootmgr
+git
+grub
+jq
+less
+linux
+linux-firmware
+nano
+networkmanager
+openssh
+sudo
+tree
+stow
