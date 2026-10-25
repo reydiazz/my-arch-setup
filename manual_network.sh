@@ -1,15 +1,15 @@
 #!/bin/bash
 
-if["$#" -ne 3]; then
-   echo "Error": Faltan parametros."
-   echo "Uso: $0 <interfaz> <ip/mascara> <gateway>"
-   echo "Ejemplo: $0 enp0s3 192.168.18.150/24 192.168.18.1"
+if [ "$#" -ne 3 ]; then
+   echo "==> (Error) Completar los parametros: interfaz, ip/mascara y gateway."
    exit 1
 fi
 
 INTERFACE=$1
 IP=$2
 GATEWAY=$3
+
+echo "==> (Proceso) Estableciendo configuracion de red..."
 
 systemctl stop NetworkManager
 ip addr flush dev $INTERFACE
@@ -20,4 +20,4 @@ ip route add default via $GATEWAY
 rm -f /etc/resolv.conf
 echo "nameserver 1.1.1.1" > /etc/resolv.conf
 
-echo "Red levantada manualmente en $INTERFACE"
+echo "==> (Exito) Red levantada manualmente en $INTERFACE"
