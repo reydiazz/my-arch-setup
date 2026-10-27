@@ -15,8 +15,4 @@ stow
 kbd
 terminus-font
 dhclient
-xorg-server
-xorg-xinit
-openbox
-xterm
 firefox
